@@ -1,0 +1,31 @@
+var height = 5;
+var i = height;
+
+// Outer while loop for the rows, counting down from `height` to 1.
+while (i >= 1) {
+  var row = "";
+  
+  // Inner while loop to print the leading spaces.
+  // The number of spaces increases with each row.
+  var spaceCount = height - i;
+  var j = 0;
+  while (j < spaceCount) {
+    row += " ";
+    j++;
+  }
+  
+  // Inner while loop to print the stars.
+  // The number of stars decreases with each row.
+  var starCount = i;
+  var k = 0;
+  while (k < starCount) {
+    row += "*";
+    k++;
+  }
+  
+  // Print the completed row.
+  console.log(row);
+  
+  // Decrement the row counter for the outer loop.
+  i--;
+}
